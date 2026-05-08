@@ -55,9 +55,9 @@
 
 /*Body and Structure*/
 body {
-background: var(--bg-img) repeat ;
+background: url("/assets/images/blackmesa.png");
 background-color: var(--bg-color);
-background-size: auto;
+background-size: cover;
 font-family: var(--primary-font);
 color: var(--text-color);
 margin: 0px; /* Keeps the navbar and footer sticking on the edges */
