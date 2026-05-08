@@ -55,7 +55,7 @@
 
 /*Body and Structure*/
 body {
-background: var(--bg-img) no-repeat ;
+background: url("/assets/images/blackmesa.png");
 background-color: var(--bg-color);
 background-size: cover;
 font-family: var(--primary-font);
