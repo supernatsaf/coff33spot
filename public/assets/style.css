@@ -1,0 +1,208 @@
+/*fonts*/
+@font-face {
+  font-family: "haas";
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.eot');
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.eot') format('embedded-opentype'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.woff') format('woff'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+@font-face {
+  font-family: "haas";
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.eot');
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.eot') format('embedded-opentype'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.woff2') format('woff2'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.woff') format('woff'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.ttf') format('truetype');
+  font-weight:bold;
+  font-style:normal;
+}
+@font-face {
+  font-family: "haas";
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.eot');
+  src: url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.eot') format('embedded-opentype'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.woff2') format('woff2'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.woff') format('woff'),
+       url('fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.ttf') format('truetype');
+  font-weight:lighter;
+  font-style:normal;
+}
+
+/*main theme*/
+:root{
+  --bg-color:#ede9e3;
+  --innerbox-color1:#ede1d0;
+  --innerbox-color2:#d1c4b1;
+  --innerbox-color3:#d1c4b1;
+  --border-color1:#000000;
+  
+  --title-color:#000000;
+  --text-color:#000000;
+  --light-text:#FFFFFF;
+  --link-color:#2010b5;
+  --link-hover:#7010b5;
+  --link-visited:#7010b5;
+  --text-shadow:#282828;
+  --primary-font:"haas", sans-serif;
+  --secondary-font:sans-serif;
+  
+  /*misc shit*/
+  --bg-img:url("/images/background.png");
+  --selection-text:;
+}
+
+/*Body and Structure*/
+body {
+background: var(--bg-img) repeat ;
+background-color: var(--bg-color);
+background-size: auto;
+font-family: var(--primary-font);
+color: var(--text-color);
+margin: 0px; /* Keeps the navbar and footer sticking on the edges */
+line-height: 17px;
+cursor: var(--cursor-main);
+}
+
+/* === TEXT THINGS === */
+p {font-size: 20px; margin: 14px 0px; line-height: 24px}
+
+a {text-decoration: underline dotted 1px;
+  font-family: var(--secondary-font);
+  color: var(--link-color);
+  font-weight: 100;
+  font-size: 15px;}
+
+a:visited { color: var(--link-visited) }
+a:hover{ cursor: var(--cursor-pointer); color: var(--link-hover); transition: 0.2s; }
+
+b{font-family: var(--primary-font);
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  font-size: 25px;  }
+
+t{font-family: var(--secondary-font);
+  color: var(--title-color);
+  margin: 10px 10px 10px 5px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size:50px;
+  padding: 10px; }
+
+h1{font-family: var(--secondary-font);
+  color: var(--title-color);
+  margin: 15px 10px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  padding: 5px;  }
+
+h2{font-family: var(--secondary-font);
+  color: var(--title-color);
+  margin: 15px 10px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  padding-bottom: 4px; /* Don't delete this, this is so letters don't get cropped */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  padding-top: 4px;
+  margin-top: 6px;
+  font-size: 25px;;
+}
+
+h3{font-family: var(--secondary-font);
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 5px; 
+}
+h4{font-family: var(--secondary-font);
+  color: var(--title-color);
+  margin: 15px 10px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  padding: 5px; }
+
+
+/* === Misc Basic tags === */
+hr { border-top: 1px dotted var(--border-color2); border-bottom: 1px dotted var(--border-color1); }
+
+button{
+box-shadow: 1px 1px var(--border-color1);
+  text-shadow: 0px 1px var(--border-color1);
+  font-family: var(--secondary-font);
+  border: var(--bg-color) solid 2px;
+  cursor: var(--cursor-pointer);
+  background: var(--bg-color);
+  color: var(--light-text);
+  padding: 5px 10px 3px;
+  border-radius: 3px;
+  font-size: 17px;
+  margin: 2px;
+}
+
+/*layouts*/
+.imgcontainer img { max-width: 100%; object-fit: contain; }
+
+.flexinternal {
+  box-shadow: 1px 1px var(--border-color1), -1px -1px var(--border-color2);
+  background-color: var(--innerbox-color2);
+  border: 2px var(--border-color1);
+  text-align: center;
+  margin: 5% 0% 2% 0%;
+  overflow: auto;
+  padding: 20px;
+  width:90%;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+}
+
+div.flexinternal > div {
+  margin: 10px;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+@media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+
+.warningcontent{
+ position:fixed;
+ text-align:center;
+ width:500px;
+ height:500px;
+ background:url("/assets/images/bggif.gif");
+
+}
+
+.maincontent{
+flex:40%;
+align-items: baseline;
+background-color: var(--innerbox-color3);
+padding:2%;
+margin:5%;
+}
+
+.rightcontent{
+flex:60%;
+align-items: baseline;
+background-color: var(--innerbox-color3);
+padding:2%;
+margin:5%;
+}
+
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}
+
+/*art pieces (wip)*/
